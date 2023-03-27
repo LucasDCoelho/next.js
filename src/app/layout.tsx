@@ -1,4 +1,4 @@
-import './globals.css'
+import { ReactNode } from 'react'
 
 export const metadata = {
   title: 'Create Next App',
@@ -11,8 +11,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="pt-BR">
+      <body>
+        <h1>Teste</h1>
+        {children}
+      </body>
     </html>
   )
 }
