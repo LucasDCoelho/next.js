@@ -1,19 +1,20 @@
 import Link from "next/link";
 
-
-
-export default async function Home() {
-  const response = await fetch('https://api.github.com/users/LucasDCoelho', {
-    cache: 'no-store'
-  });
-  const user = await response.json();
+export default function Home() {
 
   return (
     <div>
-      <h1>Hello World</h1>
-      <pre>{JSON.stringify(user , null, 2)}</pre>
-      <Link href="./app">Dashboard</Link>
-    </div>
-    
+      <header className="flex justify-evenly py-8">
+        <section className="flex">
+          <img src="" alt="..." />
+        </section>
+        <nav className="flex list-none gap-4">
+          <li className="font-bold hover:text-cyan-600">Home</li>
+          <li><Link href="/about">About</Link></li>
+          <li>Skills</li>
+          <li>Contact</li>
+        </nav>
+      </header>
+    </div>  
   )
 }
